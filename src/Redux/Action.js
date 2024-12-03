@@ -1,20 +1,26 @@
-import {
-  ADD_TODO,
-  DELETE_TODO,
-  TOGGLE_TODO,
-} from "./ActionType.js";
+// src/redux/actions.js
+import { ADD_TO_CART, REMOVE_FROM_CART, INCREASE_QUANTITY, DECREASE_QUANTITY } from './ActionType';
 
-export const addTodo = (task) => ({
-  type: ADD_TODO,
-  payload: task,
+// Action to add a product to the cart
+export const addToCart = (product) => ({
+  type: ADD_TO_CART,
+  payload: product,
 });
 
-export const deleteTodo = (id) => ({
-  type: DELETE_TODO,
-  payload: id,
+// Action to remove a product from the cart
+export const removeFromCart = (product) => ({
+  type: REMOVE_FROM_CART,
+  payload: product,
 });
 
-export const toggleTodo = (id) => ({
-  type: TOGGLE_TODO,
-  payload: id,
+// Action to increase the quantity of a product
+export const increaseQuantity = (product) => ({
+  type: INCREASE_QUANTITY,
+  payload: product,
+});
+
+// Action to decrease the quantity of a product
+export const decreaseQuantity = (product) => ({
+  type: DECREASE_QUANTITY,
+  payload: product,
 });

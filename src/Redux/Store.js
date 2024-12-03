@@ -1,4 +1,7 @@
-import { legacy_createStore } from "redux";
-import { Reducers } from "./Reducers";
+// src/redux/store.js
+import { legacy_createStore } from 'redux';
+import reducer from './Reducer';
 
-export const Store = legacy_createStore(Reducers);
+const store = legacy_createStore(reducer);
+
+export default store;
